@@ -1,0 +1,67 @@
+﻿@model List<CanteenManage.Models.Salary>
+
+@{
+    ViewData["Title"] = "Employee Salary Details";
+}
+
+<h1>Employee Salary Details</h1>
+
+<div>
+<a class="btn btn-success" asp-action="AddSalary" asp-route-employeeId="@ViewBag.EmployeeId">Monthly Salary</a>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Month</th>
+            <th>Paid Amount</th>
+            <th>Payment Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var salary in Model)
+        {
+            <tr>
+                <td>@salary.SalaryMonth</td>
+                <td>@salary.PaidAmount</td>
+                <td>@salary.PaymentDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<h2>Attendance Details</h2>
+
+@if (ViewBag.AttendanceDetails != null && ((List<CanteenManage.Models.Attendance>)ViewBag.AttendanceDetails).Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Attendance Status</th>
+                <th>Overtime</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var attendance in ViewBag.AttendanceDetails)
+            {
+                <tr>
+                    <td>@attendance.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@attendance.Status</td>
+                    <td>@attendance.OvertimeHours</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No attendance details available.</p>
+}
+
+<div>
+    <a class="btn btn-success" asp-action="MarkAttendanceForm" asp-route-employeeId="@ViewBag.EmployeeId">Mark Attendance</a>
+    <a class="btn btn-secondary" asp-action="Main">Back to Employee List</a>
+</div>

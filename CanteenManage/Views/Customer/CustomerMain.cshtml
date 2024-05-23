@@ -1,0 +1,87 @@
+﻿@model IEnumerable<CanteenManage.Models.Customer>
+
+@{
+    ViewData["Title"] = "Customer List";
+}
+
+<h1>Customer List</h1>
+
+<p>
+    <a class="btn btn-secondary ms-3" asp-action="Create">Create New</a>
+    <!-- Add button for Attendance -->
+    <a class="btn btn-success" asp-action="TakeAttendance">Attendance</a>
+
+</p>
+
+<form asp-action="CustomerMain" method="get">
+    <div class="form-group">
+        <input type="text" class="form-control" id="searchInput" name="searchInput" placeholder="Search by name or phone number">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubscriptionStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubscriptionExpiryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrepaidBalance)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubscriptionStartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubscriptionExpiryDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrepaidBalance)
+                </td>
+                <td>
+                    <a class="btn btn-primary ms-3" asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a> |
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

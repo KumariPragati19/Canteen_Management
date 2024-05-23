@@ -1,0 +1,40 @@
+﻿@model List<CustomerOrder>
+
+<p>
+    <a class="btn btn-success ms-3" asp-controller="CustomerOrder" asp-action="PlaceOrder">Today's Order</a>
+</p>
+
+<h1>Customer Orders</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer ID</th>
+            <th>Order Date</th>
+            <th>Product ID</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.OrderId</td>
+                <td>@order.CustomerId</td>
+                <td>@order.OrderDate</td>
+                <td>@order.ProductId</td>
+                <td>@order.Quantity</td>
+                <td>@order.Amount</td>
+                <td>@order.RemainingBalance</td>
+               @* <td>
+                    <form asp-action="DeleteOrder" asp-route-id="@order.OrderId" method="post">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+            </td> *@
+            </tr>
+        }
+    </tbody>
+</table>

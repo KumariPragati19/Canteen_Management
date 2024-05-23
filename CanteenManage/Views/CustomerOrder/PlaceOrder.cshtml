@@ -1,0 +1,67 @@
+﻿@model CustomerOrder
+@{
+    ViewData["Title"] = "PlaceOrder";
+}
+
+<p>
+    <a class="btn btn-success ms-3" asp-controller="CustomerOrder" asp-action="NewOrder">New Order</a>
+</p>
+
+<h1>Place Order</h1>
+
+<form asp-action="PlaceOrder" method="post">
+    <div class="form-group">
+        <label for="OrderDate">Order Date:</label>
+        <input type="datetime-local" class="form-control" id="OrderDate" name="OrderDate">
+    </div>
+    <div class="form-group">
+        <label for="CustomerId">Select Customer:</label>
+        <select class="form-control" id="CustomerId" name="CustomerId">
+            @foreach (var customer in ViewBag.Customers)
+            {
+                <option value="@customer.CustomerId">@customer.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="ProductId">Select Product:</label>
+        <select class="form-control" id="ProductId" name="ProductId">
+            @foreach (var product in ViewBag.Products)
+            {
+                <option value="@product.ProductId">@product.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Quantity">Quantity:</label>
+        <input type="number" class="form-control" id="Quantity" name="Quantity" onchange="calculateAmount()">
+    </div>
+    <div class="form-group">
+        <label for="Amount">Amount:</label>
+        <input type="text" class="form-control" id="Amount" name="Amount" readonly>
+    </div>
+    <div class="form-group">
+        <label for="RemainingBalance">Remaining Balance:</label>
+        <input type="text" class="form-control" id="RemainingBalance" name="RemainingBalance" readonly>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Order</button>
+</form>
+
+@section scripts {
+    <script>
+        function calculateAmount() {
+            var productId = document.getElementById("ProductId").value;
+            var quantity = document.getElementById("Quantity").value;
+            var productPrice = @Html.Raw(Json.Serialize(ViewBag.Price));
+            var productPrice = productPrice[productId];
+            var amount = productPrice * quantity;
+            document.getElementById("Amount").value = amount.toFixed(2);
+            var customerId = document.getElementById("CustomerId").value;
+            var prepaidBalance = @Html.Raw(Json.Serialize(ViewBag.PrepaidBalance));
+            var prepaidBalance = prepaidBalance[customerId];
+            var remainingBalance = prepaidBalance - amount;
+            document.getElementById("RemainingBalance").value = remainingBalance.toFixed(2);
+            
+        }
+    </script>
+}

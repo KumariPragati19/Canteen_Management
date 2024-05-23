@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\CanteenManage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|c:\\users\\hp\\source\\repos\\canteenmanage\\canteenmanage\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|solutionrelative:canteenmanage\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|c:\\users\\hp\\source\\repos\\canteenmanage\\canteenmanage\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|solutionrelative:canteenmanage\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|c:\\users\\hp\\source\\repos\\canteenmanage\\canteenmanage\\views\\customer\\takeattendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|solutionrelative:canteenmanage\\views\\customer\\takeattendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|c:\\users\\hp\\source\\repos\\canteenmanage\\canteenmanage\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|solutionrelative:canteenmanage\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|c:\\users\\hp\\source\\repos\\canteenmanage\\canteenmanage\\models\\customerattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|solutionrelative:canteenmanage\\models\\customerattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|c:\\users\\hp\\source\\repos\\canteenmanage\\canteenmanage\\views\\customerorder\\ordermain.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{07A28879-6FC7-498A-A7FE-63FBAF4DFB3B}|CanteenManage\\CanteenManage.csproj|solutionrelative:canteenmanage\\views\\customerorder\\ordermain.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 320,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TakeAttendance.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Views\\Customer\\TakeAttendance.cshtml",
+              "RelativeDocumentMoniker": "CanteenManage\\Views\\Customer\\TakeAttendance.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Views\\Customer\\TakeAttendance.cshtml",
+              "RelativeToolTip": "CanteenManage\\Views\\Customer\\TakeAttendance.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAuwC8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T03:21:19.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderMain.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Views\\CustomerOrder\\OrderMain.cshtml",
+              "RelativeDocumentMoniker": "CanteenManage\\Views\\CustomerOrder\\OrderMain.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Views\\CustomerOrder\\OrderMain.cshtml",
+              "RelativeToolTip": "CanteenManage\\Views\\CustomerOrder\\OrderMain.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T04:13:34.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "CanteenManage\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "CanteenManage\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAUwIYAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T13:59:12.851Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 320,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "CanteenManage\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "CanteenManage\\Controllers\\CustomerController.cs",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAkwIYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:01:32.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "CanteenManage\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Models\\Customer.cs",
+              "RelativeToolTip": "CanteenManage\\Models\\Customer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:16:06.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerAttendance.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Models\\CustomerAttendance.cs",
+              "RelativeDocumentMoniker": "CanteenManage\\Models\\CustomerAttendance.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\CanteenManage\\CanteenManage\\Models\\CustomerAttendance.cs",
+              "RelativeToolTip": "CanteenManage\\Models\\CustomerAttendance.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:18:18.303Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+﻿@model CanteenManage.Models.Salary
+
+@{
+    ViewData["Title"] = "Add Salary";
+}
+
+<h1>Add Salary</h1>
+
+<form asp-action="AddSalary" method="post">
+    <input type="hidden" asp-for="EmployeeId" value="@ViewBag.EmployeeId" />
+
+    <div class="form-group">
+        <label asp-for="SalaryMonth">Month</label>
+        <select asp-for="SalaryMonth" class="form-control">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+        <span asp-validation-for="SalaryMonth" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PaidAmount">Paid Amount</label>
+        <input asp-for="PaidAmount" class="form-control" />
+        <span asp-validation-for="PaidAmount" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PaymentDate">Payment Date</label>
+        <input asp-for="PaymentDate" class="form-control" />
+        <span asp-validation-for="PaymentDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

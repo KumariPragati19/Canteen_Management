@@ -1,0 +1,65 @@
+﻿@model CanteenManage.Models.Employee
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Employee</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="EmployeeId" />
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Age" class="control-label"></label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="JoiningDate" class="control-label"></label>
+        <input asp-for="JoiningDate" class="form-control" />
+        <span asp-validation-for="JoiningDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ResignDate" class="control-label"></label>
+        <input asp-for="ResignDate" class="form-control" />
+        <span asp-validation-for="ResignDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Salary" class="control-label"></label>
+        <input asp-for="Salary" class="form-control" />
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Address" class="control-label"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Aadhar" class="control-label"></label>
+        <input asp-for="Aadhar" class="form-control" />
+        <span asp-validation-for="Aadhar" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Phone" class="control-label"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-danger ms-3"
+    asp-action="Delete" asp-controller="Employee">
+    Delete
+    </button>
+</form>

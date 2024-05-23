@@ -1,0 +1,16 @@
+﻿@model CanteenManage.Models.Attendance
+
+@{
+    ViewData["Title"] = "Attendance Already Marked";
+}
+
+<h1>Attendance Already Marked</h1>
+
+<div>
+    <p>Attendance for today has already been marked for Employee ID: @Model.EmployeeId</p>
+    <p>Date: @Model.Date.ToString("yyyy-MM-dd")</p>
+    <p>Status: @Model.Status</p>
+    <p>Overtime: @Model.OvertimeHours</p>
+</div>
+
+<a class="btn btn-secondary" asp-action="SalaryMain" asp-route-id="@Model.EmployeeId">Back to Salary Details</a>

@@ -1,0 +1,33 @@
+﻿@model List<CanteenManage.Models.VendPurchase>
+@{
+    ViewData["Title"] = "Purchase Details";
+}
+<h1>Purchase Details</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var purchase in Model)
+        {
+            <tr>
+                <td>@purchase.ProductName</td>
+                <td>@purchase.Price</td>
+                <td>@purchase.OrderDate</td>
+                <td>
+                <form asp-action="DeletePurchase" asp-route-id="@purchase.OrderId" method="post">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a class="btn btn-success ms-3" asp-action="AddPurchase" asp-route-vendor_id="@ViewBag.VendorId">Add</a>
+</div>

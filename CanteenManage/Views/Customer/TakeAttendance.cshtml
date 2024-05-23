@@ -1,0 +1,58 @@
+﻿@model List<CanteenManage.Models.CustomerAttendance>
+
+<h2>Take Attendance</h2>
+
+<form id="attendanceForm" method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customerAttendance in Model)
+            {
+                <tr>
+                    <td>@customerAttendance.CustomerId</td>
+                    <td>@customerAttendance.CustomerName</td>
+                    <td>@(customerAttendance.Date?.ToString("yyyy-MM-dd") ?? DateTime.Today.ToString("yyyy-MM-dd"))</td>
+                    <td>
+                        <input type="hidden" name="AttendanceRecords.Index" value="@customerAttendance.AttendanceId" />
+                        <input type="hidden" name="AttendanceRecords[@customerAttendance.AttendanceId].AttendanceId" value="@customerAttendance.AttendanceId" />
+                        <input type="hidden" name="AttendanceRecords[@customerAttendance.AttendanceId].Date" value="@customerAttendance.Date" />
+                        <select name="AttendanceRecords[@customerAttendance.AttendanceId].Status">
+                            <option value="Present" selected="@((customerAttendance.Status == "Present") ? "selected" : null)">Present</option>
+                            <option value="Absent" selected="@((customerAttendance.Status == "Absent") ? "selected" : null)">Absent</option>
+                        </select>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary">Save Attendance</button>
+</form>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('#attendanceForm').submit(function (e) {
+                e.preventDefault(); // Prevent the form from submitting normally
+                
+                $.ajax({
+                    url: '@Url.Action("TakeAttendance", "Customer")',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        alert('Attendance saved successfully.');
+                    },
+                    error: function () {
+                        alert('Error occurred while saving attendance.');
+                    }
+                });
+            });
+        });
+    </script>
+}
